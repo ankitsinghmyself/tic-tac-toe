@@ -12,9 +12,6 @@ To run this just clone this repo and run ttt.py
 	
 ## 💻 Overview of the files
 
-> 1.  data/stories.md - contains stories
-> 2.  data/nlu.md - contains NLU training data
-> 3.  actions.py - contains custom action/api code
-> 4.  domain.yml - the domain file, including bot response templates
-> 5.  config.yml - training configurations for the NLU pipeline and policy ensemble
+> 1.  tic-tac-toe.py - It is main file that have all functionalities 
+> 2.  *.gif & *.jpg - all are images files that i used in this project 
 

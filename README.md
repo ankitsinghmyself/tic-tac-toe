@@ -4,7 +4,7 @@
 The purpose of this repo is to showcase a Tic-tac-toe game written in pure Python 3.5.
 	It supports the following user goals:
    *  Two player can play this game
-*Note that this bot should be used with python 3.5*
+> *Note that this bot should be used with python 3.5*
 	
 ## 🤖 To run CIS RASA BOT
 To run this just clone this repo and run ttt.py

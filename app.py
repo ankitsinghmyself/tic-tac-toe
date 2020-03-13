@@ -77,8 +77,5 @@ def winnerFound(board):
 	#game is drawn since there is no winner 
 	#and all boxes are filled
 	return [False, "draw"]
-
-
-
-
-
+if __name__ == "__main__":
+    app.run()

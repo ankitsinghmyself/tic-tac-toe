@@ -1,56 +1,126 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Tic Tac Toe</title>
-        <link rel="stylesheet" 
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
-        <style>
-            table {
-                border-collapse: collapse;
-            }
-            td {
-                border: 1px solid black;
-                width: 150px;
-                height: 150px;
-                font-size: 30px;
-                text-align: center;
-            }
-            td > a {
-                font-size: 18px;
-            }
-        </style>
-    </head>
-    <body>
-        
-         <div>
-            <a href="{{url_for('reset')}}" class="btn btn-default">Reset Game</a>
-             
-         </div>
 
-         {% if draw %}
-            <div>
-                    <h1> Game Drawn</h1>
-            </div>
-         {% endif %}
-         {% if winnerFound %}
-            <div>
-                    <h1> WINNER is {{winner}}</h1>
-            </div>
-         {% endif %}
-        <table>
+<head>
+    <title>Tic Tac Toe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            width: 105px;
+            height: 105px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        td>a {
+            font-size: 18px;
+        }
+
+        .butt {
+            border: 1px outset blue;
+            background-color: lightBlue;
+            height: 105px;
+            width: 105px;
+            cursor: pointer;
+        }
+
+        .butt:hover {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+
+        <h1 style="align-content: center;">Tic Tac Toe</h1>
+        <hr style="color: blue;">
+        <hr style="color: olivedrab;">
+
+        {% if draw %}
+        <div>
+            <h1 style="color: red;"> Game Drawn</h1>
+        </div>
+        {% endif %}
+        {% if winnerFound %}
+        <div>
+            <h1 style="color: green;"> WINNER is {{winner}}</h1>
+        </div>
+        {% endif %}
+        <table  style="border:double;">
             {% for i in range(3) %}
-                <tr>
-                    {% for j in range(3) %}
-                        <td>
-                            {% if game[i][j] %}
-                                {{ game[i][j] }}
-                            {% else %}
-                                <a href="{{ url_for('play', row=i, col=j) }}">Play {{turn}} here.</a>
-                            {% endif %}
-                        </td>
-                    {% endfor %}
-                </tr>
+            <tr>
+                {% for j in range(3) %}
+                <td>
+                    {% if game[i][j] %}
+                    {{ game[i][j] }}
+                    {% else %}
+                    <a href="{{ url_for('play', row=i, col=j) }}"><button class="butt">Turn {{turn}}</button> </a>
+                    {% endif %}
+                </td>
+                {% endfor %}
+            </tr>
             {% endfor %}
         </table>
-    </body>
+        <div><a href="{{url_for('reset')}}" class="btn btn-danger">Reset Game</a></div>
+        <hr>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 copyright">
+                        <p>
+                            Copyright &copy; 2020 ANKIT SINGH
+                        </p>
+                    </div>
+
+                    <div class="col-sm-5 social">
+                        <ul>
+
+                            <a href="https://github.com/ankitsinghmyself/" target="_blank"><i class="fa fa-github"
+                                    aria-hidden="true" style="font-size:24px;color: black;"></i></a>
+                            &nbsp;&nbsp;
+                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow"
+                                    aria-hidden="true" style="font-size:24px;color: orange;"></i></a>
+                            &nbsp;&nbsp;
+                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"
+                                    style="font-size:24px"></i></a>
+                            &nbsp;&nbsp;
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"
+                                    aria-hidden="true" style="font-size:24px;color: blue;"></i></a>
+                            &nbsp;&nbsp;
+                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"
+                                    style="font-size:24px;color: skyblue;"></i></a>
+                            &nbsp;&nbsp;
+                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"
+                                    aria-hidden="true" style="font-size:24px;color: red;"></i></a>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End footer -->
+
+    </center>
+</body>
+
 </html>

@@ -59,7 +59,7 @@ def winnerFound(board):
 		if(board[0][i] == None):
 			break
 		if (board[0][i] == board[1][i] and board[0][i] == board[2][i]):
-			return [True, board[0][1]]
+			return [True, board[0][i]]
 	#check diagonals
 	if(board[0][0] == board[1][1] and board[0][0] == board[2][2]):
 		if(board[0][0] != None):
@@ -67,7 +67,7 @@ def winnerFound(board):
 	#check diagonals
 	if(board[2][0] == board[1][1] and board[2][0] == board[0][2]):
 		if(board[2][0] != None):
-			return [True, board[0][0]]
+			return [True, board[2][0]]
 	#check if game is drawn
 	for i in range(len(board)):
 		for j in range(len(board)):
@@ -77,4 +77,5 @@ def winnerFound(board):
 	#game is drawn since there is no winner 
 	#and all boxes are filled
 	return [False, "draw"]
-
+if __name__ == "__main__":
+    app.run(debug="true")

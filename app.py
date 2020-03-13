@@ -47,7 +47,7 @@ def reset():
 	return redirect(url_for("index"))
 
 def winnerFound(board):
-	print("here at winner")
+	#print("here at winner")
 	#check rows
 	for i in range(len(board)):
 		if(board[i][0] == None):

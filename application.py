@@ -26,7 +26,7 @@ def index():
     if(winner[0] == False and winner[1] == "draw"):
     	session["draw"] = True
 
-    return render_template("game.html", game=session["board"], turn=session["turn"],winnerFound=session["winner"],winner=session["turn"],draw=session["draw"])
+    return render_template("index.html", game=session["board"], turn=session["turn"],winnerFound=session["winner"],winner=session["turn"],draw=session["draw"])
 
 @app.route("/play/<int:row>/<int:col>")
 def play(row, col):

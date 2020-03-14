@@ -15,3 +15,4 @@ To run this just clone this repo and run ttt.py
 > 1.  tic-tac-toe.py - It is main file that have all functionalities 
 > 2.  *.gif & *.jpg - all are images files that i used in this project 
 
+[Demo](https://ttt-game-python.herokuapp.com/)

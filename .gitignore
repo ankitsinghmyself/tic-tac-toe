@@ -111,5 +111,5 @@ venv.bak/
 .nx/*
 sessions/*
 
-# temporary audio.wav files
-audio.wav
+# temporary audio files (generated after receiving binary from requests)
+*.wav

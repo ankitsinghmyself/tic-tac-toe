@@ -1,0 +1,50 @@
+/* to display a loading animation & blink the icon inside container */
+.listening-feedback-container {
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+}
+
+.listening-feedback-container h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #007bff;
+    text-align: center;
+}
+
+.listening-feedback-container .icon {
+    font-size: 24px;
+    color: #007bff;
+    width: 24px;
+    height: 24px;
+}
+
+.active {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    margin: 5px auto;
+
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.active .icon {
+    animation: blink 1s infinite;
+}

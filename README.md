@@ -6,7 +6,7 @@ The purpose of this repo is to showcase a Tic-tac-toe game written in pure Pytho
    *  Two player can play this game
 > *Note that to run this game should be used with python 3.5*
 	
-## 🤖 To run CIS RASA BOT
+## 🤖 To run CIS Tic Tac Toe Game
 To run this just clone this repo and run ttt.py
 >  `python tic-tac-toe.py`
 	

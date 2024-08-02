@@ -5,5 +5,5 @@ httplib2==0.19.0
 httptools==0.1.1
 pathlib==1.0.1
 requests==2.23.0
-urllib3==1.26.5
+urllib3==1.26.19
 Werkzeug==0.15.6

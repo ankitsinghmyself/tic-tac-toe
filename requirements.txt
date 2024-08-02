@@ -1,6 +1,6 @@
 flask_session==0.3.1
 Flask==1.1.1
-gunicorn==19.9.0
+gunicorn==22.0.0
 httplib2==0.19.0
 httptools==0.1.1
 pathlib==1.0.1

@@ -102,3 +102,14 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+# custom folders
+	mp/*
+
+
+.nx/*
+sessions/*
+
+# temporary audio files (generated after receiving binary from requests)
+*.wav
